@@ -1,0 +1,72 @@
+﻿using System.Reflection;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        // Sıra geldi tanımlanmış class dan bir örnek-instance-nesne yaratmaya
+        // <Sınıf adı> <Nesne adı> = new <Sınıf Adı>
+
+        CarGallery carGalleryM = new CarGallery(); // Nesnem tanımlanmış olan sınıftan kendini örnekledi(instance aldı..nesne yaratıldı bellekte)
+
+        // nesnemizin özelliklerine ulaşalım
+
+        carGalleryM.Colour = "Füme";
+
+        carGalleryM.Brand = "Mercedes"; // bellekte boş olarak duran yerleri doldurdum veri ile
+        carGalleryM.Model = "C200";
+
+        //CarGallery carGalleryV = new CarGallery(); // Nesnem tanımlanmış olan 
+        //carGalleryV.Colour = "Bordo";
+
+        //carGalleryV.Brand = "Volvo"; // bellekte boş olarak duran yerleri doldurdum veri ile
+        //carGalleryV.Model = "XC70";
+
+        //CarGallery carGalleryVW = new CarGallery(); // Nesnem tanımlanmış olan 
+        //carGalleryVW.Colour = "Kırmızı";
+
+        //carGalleryVW.Brand = "Volkwagen"; // bellekte boş olarak duran yerleri doldurdum veri ile
+        //carGalleryVW.Model = "1303S";
+
+        //object obj = new object();
+
+        //PropertyInfo[] properties= obj.GetType().GetProperties();
+
+        //foreach (PropertyInfo property in properties)
+        //{
+        //    var Deger=
+        //    Console.WriteLine("Arabanın markası : " + property.Brand + " - Modeli : " + carGalleryM..Model + " - Rengi :" + carGallery.Colour);
+
+        //    Console.WriteLine(carGallery.Price.ToString()+"\n\n"); //  fiyatını da sınıf içinde default olarak tanımlanmış propertiy den (özellikten) alacak
+
+        //}
+
+
+
+        Console.ReadKey();
+
+
+        //Console.WriteLine("Hello, World!");
+    }
+
+    // Benim bir araba galerim  var. Galerimde arabalar var...
+    // Dolayısı ile ilk önce içinde verileri tutacak sınıfımı bir tanımlayayım,
+    // Syntax : <erişim belirleyici> class <sınıfın adı>
+
+    public class CarGallery // CarGallery isminde bir class tanımlanıyor...
+    {
+        public string Brand { get; set; } // Marka 
+        public string Model { get; set; } // Model
+        public string MClass { get; set; } // Sınıf (B,C,SUV)
+        public int MPower { get; set; } // Motor gücü 90,140 Beygir ...
+        public int MVolume { get; set; } // 1400,2000 cc
+        public string MSerial { get; set; } // Motor seri no XSDRRT%%&Y/YWGGDS
+        public char GasType { get; set; } // Yakıt Türü
+        public char GearType { get; set; } // Vites türü
+        public string CaseType { get; set; } // Kasa tipi
+        public int ProducedYear { get; set; } // Üretildiği yıl
+        public string Colour { get; set; }  // renk bilgisi
+        public int Price=100000; // default bir değer atadım.
+
+    }
+}
